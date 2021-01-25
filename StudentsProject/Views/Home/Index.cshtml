@@ -1,0 +1,28 @@
+﻿
+
+<div class="jumbotron">
+    <h2>Students Class</h2>
+
+
+    <button type="button" onclick="loadStudents()">Load Students</button>
+
+    <h2>Update Student:</h2>
+    <form onsubmit="updateStudent()">
+        <input type="text" id="studentId" placeholder="student Id" required />
+        <input type="text" id="studentName" placeholder="student Name" required />
+        <button type="submit">Update Students</button>
+    </form>
+
+    <h2>Add Student:</h2>
+    <input type="text" id="newStudentId" placeholder="student Id" required />
+    <input type="text" id="newStudentName" placeholder="student Name" required />
+    <input type="text" id="newStudentAvg" placeholder="student Avg Grade" required />
+    <button type="button" onclick="postStudent()">Insert Students</button>
+
+    <div id="divError" class="has-error" hidden>ישנה שגיאה</div>
+    <div id="divSuccess" class="has-success" hidden>הפעולה בוצע בהצלחה</div>
+    <div id="students"></div>
+</div>
+@* script of student: *@
+@Scripts.Render("~/bundles/Student_js")
+
